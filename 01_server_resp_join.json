@@ -2,7 +2,7 @@
   "type": "response",
   "response": {
     "type": "join",
-    "status": "OK",
+    "status": "string",
     "id": 12345678
   }
 }
