@@ -1,0 +1,28 @@
+{
+  "type": "request",
+  "from": {
+    "nick": "string",
+    "password": "string",
+    "id": 123456789
+  },
+  "request": {
+    "type": "action",
+    "action_type": "string",
+    "move": {
+      "direction": 123456789
+    },
+    "rotate": {
+      "direction": 123456789
+    },
+    "use": {
+      "item_id": 123456789,
+      "target": 123456789
+    },
+    "pick": {
+      "item_id": 123456789
+    },
+    "drop": {
+      "item_id": 123456789
+    }
+  }
+}

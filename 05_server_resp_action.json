@@ -4,7 +4,9 @@
     "id": 123456789
   },
   "response": {
-    "type": "move",
+    "type": "action",
+    "status": "string",
+    "fail_reason": "string",
     "sight-data": "string",
     "character": {
       "status": "string"
