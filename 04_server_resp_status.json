@@ -1,0 +1,13 @@
+{
+  "type": "response",
+  "to": {
+    "id": 123456789
+  },
+  "response": {
+    "type": "status",
+    "sight-data": "string",
+    "character": {
+      "status": "string"
+    }
+  }
+}

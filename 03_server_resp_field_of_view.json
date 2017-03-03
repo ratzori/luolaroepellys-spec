@@ -1,0 +1,12 @@
+{
+  "type": "response",
+  "to": {
+    "id": 123456789
+  },
+  "response": {
+    "type": "fow",
+    "width": 123456789,
+    "height": 123456789,
+    "sight-pattern": "string"
+  }
+}

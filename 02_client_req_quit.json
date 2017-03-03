@@ -1,0 +1,9 @@
+{
+  "type": "request",
+  "request": {
+    "type": "quit",
+    "nick": "string",
+    "password": "string",
+    "id": 12345678
+  }
+}

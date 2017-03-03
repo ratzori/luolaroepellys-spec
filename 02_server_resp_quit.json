@@ -1,0 +1,8 @@
+{
+  "type": "response",
+  "response": {
+    "type": "quit",
+    "status": "OK",
+    "id": 12345678
+  }
+}
