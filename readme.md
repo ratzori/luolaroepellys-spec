@@ -33,11 +33,13 @@
 ```javascript
 {
   "type": "request",
+  "from": {
+    "nick": "string",
+    "password": "string",
+    "id": 123456789
+  },
   "request": {
     "type": "quit",
-    "nick": "bot1234",
-    "password": "p4ssw0rd",
-    "id": 123456789          // Bot ID
   }
 }
 ```
@@ -45,11 +47,13 @@
 ```javascript
 {
   "type": "response",
+  "to": {
+    "id": 123456789
+  },
   "response": {
     "type": "quit",
-    "status": "string",  // ok, forbidden, bad request ...
-    "error": "string",   // Filled when status != ok
-    "id": 123456789      // Bot ID
+    "status": "string",
+    "error": "string"
   }
 }
 ```
