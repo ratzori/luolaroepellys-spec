@@ -17,7 +17,7 @@ pattern:      SSSXXXSSSSSXXXXXSSSXXXXXXXSXXXXXXXXXXXXX@XXXXXXXXXXXXXSXXXXXXXSSSX
 ```
 ###Full pattern is decoded to table by splitting with width and height
 ```
-  012345678
+  012345678 ( width )
 0 SSSXXXSSS
 1 SSXXXXXSS
 2 SXXXXXXXS
@@ -48,9 +48,10 @@ nort-east     @ is in the bottom-left corner
 east          @ is in the middle-left
 and so on...
 ```
-###Decoded info is mapped to full field of view
+###Decoded info mapped to full field of view table
 ```
-  45678
+  01234  ( width )
+  45678  ( width mapped to full sight of view )
 0 SSSSS
 1 S.##S
 2 S..#S
