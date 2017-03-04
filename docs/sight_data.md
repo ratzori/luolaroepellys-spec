@@ -30,7 +30,7 @@ pattern:      SSSXXXSSSSSXXXXXSSSXXXXXXXSXXXXXXXXXXXXX@XXXXXXXXXXXXXSXXXXXXXSSSX
 ```
 
 ##Partial sight data
-Partial sight data is used when the bot has succesfully joined the game
+Partial sight data is used when the bot has succesfully joined the game and has received full pattern data. Partial sight data must fit inside the full sight data.
 
 ###Example of the partial sight data
 ```
