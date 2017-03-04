@@ -1,4 +1,4 @@
 # Luolapeliroepellys
 
 ## API reference
-[Server-client API](docs/server-client-api.md)
+[Client-server API](docs/client-server_api.md)
