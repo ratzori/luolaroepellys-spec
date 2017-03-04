@@ -6,8 +6,9 @@
   "response": {
     "type": "action",
     "status": "string",
-    "fail_reason": "string",
-    "sight-data": "string",
+    "error": "string",
+    "orientation": "string",
+    "sight_data": "string",
     "character": {
       "status": "string"
     }

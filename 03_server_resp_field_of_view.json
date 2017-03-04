@@ -7,6 +7,6 @@
     "type": "fow",
     "width": 123456789,
     "height": 123456789,
-    "sight-pattern": "string"
+    "sight_pattern": "string"
   }
 }

@@ -3,6 +3,7 @@
   "response": {
     "type": "quit",
     "status": "string",
+    "error": "string",
     "id": 12345678
   }
 }

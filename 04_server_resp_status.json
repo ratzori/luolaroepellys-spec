@@ -5,9 +5,25 @@
   },
   "response": {
     "type": "status",
-    "sight-data": "string",
+    "orientation": "string",
+    "sight_data": "string",
     "character": {
-      "status": "string"
+      "status": "string",
+      "health": 123456789,
+      "inventory": {
+        "item": {
+          "type": "string",
+          "id": 123456789
+        },
+        "item": {
+          "type": "string",
+          "id": 123456789
+        },
+        "item": {
+          "type": "string",
+          "id": 123456789
+        }
+      }
     }
   }
 }
