@@ -1,4 +1,4 @@
-#Luolaroepellys spec 0.0.1
+#Luolaroepellys server-client API ver. 0.0.1
 
 ## Join game ##
 
