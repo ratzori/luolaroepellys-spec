@@ -31,6 +31,7 @@ and so on...
 S  Shadow ( area that is out of the sight )
 @  Own bot
 C  Character ( other bots )
+I  Item
 .  Terrain
 %  Food
 +  Closed door
