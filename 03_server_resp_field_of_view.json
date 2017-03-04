@@ -6,6 +6,7 @@
   "response": {
     "type": "fow",
     "sight_data": {
+      "type": "full",
       "orientation": "string",
       "width": 123456789,
       "height": 123456789,

@@ -6,6 +6,7 @@
   "response": {
     "type": "status",
     "sight_data": {
+      "type": "partial",
       "orientation": "string",
       "width": 123456789,
       "height": 123456789,
