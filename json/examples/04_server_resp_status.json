@@ -11,23 +11,37 @@
       "width": 123456789,
       "height": 123456789,
       "pattern": "string"
-    }
+    },
     "character": {
       "status": "string",
       "health": 123456789,
       "inventory": {
-        "item": {
-          "type": "string",
-          "id": 123456789
-        },
-        "item": {
-          "type": "string",
-          "id": 123456789
-        },
-        "item": {
-          "type": "string",
-          "id": 123456789
-        }
+        "item": [
+          {
+            "type": "weapon",
+            "id": 123456789,
+            "damage": 123456789,
+            "weapon": {
+              "type": "melee"
+            }
+          },
+          {
+            "type": "key",
+            "id": 123456789,
+            "key": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "weapon",
+            "id": 123456789,
+            "damage": 123456789,
+            "weapon": {
+              "type": "gun",
+              "ammo": 123456789
+            }
+          }
+        ]
       }
     }
   }
