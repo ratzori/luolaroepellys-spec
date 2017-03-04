@@ -1,8 +1,0 @@
-{
-  "type": "request",
-  "request": {
-    "type": "join",
-    "nick": "string",
-    "password": "string"
-  }
-}
