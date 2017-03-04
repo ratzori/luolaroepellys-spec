@@ -3,12 +3,17 @@
 ###Example of the sight pattern data
 ```
 orientation:  north-east
+type:         partial
 height:       5
 width:        5
 pattern:      SSSSSS.##SS..#SS.C.S@SSSS
 ```
-
-###Pattern is decoded using the current orientation and splitted with width and height
+### Full pattern is used in initialization to inform full possible field of view area
+```
+In full pattern @ is in the center of the pattern and width and height are odd.
+Full pattern indicates only symbols S and X.
+```
+###Partial pattern is decoded using the current orientation and splitted with width and height
 ```
 north         @ is in the bottom-center
 nort-east     @ is in the bottom-left corner
@@ -28,6 +33,7 @@ and so on...
 ###Explanation of the symbols
 ```
 #  Wall
+X  Area than can be seen ( used only in full pattern )
 S  Shadow ( area that is out of the sight )
 @  Own bot
 C  Character ( other bots )
