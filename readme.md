@@ -20,7 +20,7 @@
   "type": "response",
   "response": {
     "type": "join",
-    "status": "string",  // OK, Forbidden, Bad Request ...
+    "status": "string",  // ok, forbidden, bad request ...
     "error": "string",   // Filled when status != OK
     "id": 123456789      // Unique ID assigend for the bot given by server ( uint64 )
   }
@@ -47,8 +47,8 @@
   "type": "response",
   "response": {
     "type": "quit",
-    "status": "string",  // OK, Forbidden
-    "error": "string",   // Filled when status != OK
+    "status": "string",  // ok, forbidden, bad request ...
+    "error": "string",   // Filled when status != ok
     "id": 123456789      // Bot ID
   }
 }
@@ -82,7 +82,7 @@ Fow data contains the full view around the bot
     "type": "fow",
     "sight_data": {
       "type": "full",  // Bot in the middle, width and height odd
-      "orientation": "string", // Bot orientation: north, east, south, west
+      "orientation": "string", // Bot orientation: north, east, south, west, north-east ...
       "width": 9,
       "height": 9,
       "pattern": "SSSXXXSSSSSXXXXXSSSXXXXXXXSXXXXXXXXXXXXX@XXXXXXXXXXXXXSXXXXXXXSSSXXXXXSSSSSXXXSSS"
@@ -143,7 +143,7 @@ S = shadow, X = seen area, @ = bot position
     }
     "character": {
       "status": "string",   // alive, unconscious, dead
-      "health": 69,         // 0 - 100, 0 = dead
+      "health": 69,         // 0 - 100, 0 = dead ( uint8 )
       "inventory": {
         "item": {
           "type": "string", // weapon, key ...
