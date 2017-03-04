@@ -33,11 +33,13 @@
 ```javascript
 {
   "type": "request",
+  "from": {
+    "nick": "string",
+    "password": "string",
+    "id": 123456789
+  },
   "request": {
     "type": "quit",
-    "nick": "bot1234",
-    "password": "p4ssw0rd",
-    "id": 123456789          // Bot ID
   }
 }
 ```
@@ -45,11 +47,13 @@
 ```javascript
 {
   "type": "response",
+  "to": {
+    "id": 123456789
+  },
   "response": {
     "type": "quit",
-    "status": "string",  // ok, forbidden, bad request ...
-    "error": "string",   // Filled when status != ok
-    "id": 123456789      // Bot ID
+    "status": "string",
+    "error": "string"
   }
 }
 ```
@@ -166,7 +170,7 @@ S = shadow, X = seen area, @ = bot position
 ```
 
 Partial pattern:
- - Pattern must fit inside the full pattern
+ - Partial pattern must fit inside the full pattern
  
 Pattern is decoded using the current orientation info.
 ```
@@ -189,4 +193,65 @@ pattern: SSSSSS.##SS..#SS...S@SSSS
 2 S..#S
 3 S...S
 4 @SSSS
+```
+## Action request ##
+
+### Client->server request
+
+```javascript
+{
+  "type": "request",
+  "from": {
+    "nick": "string",
+    "password": "string",
+    "id": 123456789
+  },
+  "request": {
+    "type": "action",
+    "action_type": "string",  // rotate, interact, pick...
+    "move": {
+      "direction": "string"
+    },
+    "rotate": {               //  available when action_type == rotate
+      "orientation": "string"
+    },
+    "interact": {             //  available when action_type == interact ...
+      "target_type": "string",  // weapon, key ...
+      "target_id": 123456789    // ID of the target to be interact with
+    },
+    "pick": {
+      "target_type": "string", // to be specified ...
+      "target_id": 123456789   // to be specified ...
+    },
+    "drop": {
+      "target_type": "string",
+      "target_id": 123456789
+    }
+  }
+}
+```
+### Server->client response
+```javascript
+{
+  "type": "response",
+  "to": {
+    "id": 123456789
+  },
+  "response": {
+    "type": "action",
+    "action_type": "string",
+    "status": "string",
+    "error": "string",
+    "sight_data": {
+      "type": "partial",
+      "orientation": "string",
+      "width": 123456789,
+      "height": 123456789,
+      "pattern": "string"
+    },
+    "character": {
+      "status": "string"
+    }
+  }
+}
 ```
