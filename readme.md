@@ -91,6 +91,8 @@ Fow data contains the full view around the bot
 }
 ```
 ```
+Type "full" = bot in the middle, width and height are odd numbers. I.e. the full area that could be visible around the bot. Used only once after the join request.
+
 Orientation: north points to up in screen ( initial orientation )
 
 Pattern:
@@ -161,4 +163,30 @@ S = shadow, X = seen area, @ = bot position
     }
   }
 }
+```
+
+Partial pattern:
+ - Pattern must fit inside the full pattern
+ 
+Pattern is decoded using the current orientation info.
+```
+north, @ is in the bottom-center
+nort-east @ is in the bottom-left corner
+east @ is in the middle-left
+and so on...
+```
+
+Example:
+```
+orientation: north-east
+height: 5
+width: 5 ( compare to full table )
+pattern: SSSSSS.##SS..#SS...S@SSSS
+
+  45678
+0 SSSSS
+1 S.##S
+2 S..#S
+3 S...S
+4 @SSSS
 ```
