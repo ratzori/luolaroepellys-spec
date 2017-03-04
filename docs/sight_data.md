@@ -2,14 +2,14 @@
 
 ##Example of the sight pattern data
 ```
-SSSSSS.##SS..#SS.c.S@SSSS   
+SSSSSS.##SS..#SS.C.S@SSSS   
 ```
 ##Explanation of the symbols
 ```
-## Pattern data symbols
+#  Wall
 S  Shadow ( area that is out of the sight )
 @  Own bot
-c  Character ( other bots )
+C  Character ( other bots )
 .  Terrain
 %  Food
 +  Closed door
