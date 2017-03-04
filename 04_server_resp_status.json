@@ -5,8 +5,12 @@
   },
   "response": {
     "type": "status",
-    "orientation": "string",
-    "sight_data": "string",
+    "sight_data": {
+      "orientation": "string",
+      "width": 123456789,
+      "height": 123456789,
+      "pattern": "string"
+    }
     "character": {
       "status": "string",
       "health": 123456789,

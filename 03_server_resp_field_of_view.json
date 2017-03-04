@@ -5,8 +5,11 @@
   },
   "response": {
     "type": "fow",
-    "width": 123456789,
-    "height": 123456789,
-    "sight_pattern": "string"
+    "sight_data": {
+      "orientation": "string",
+      "width": 123456789,
+      "height": 123456789,
+      "pattern": "string"
+    }
   }
 }

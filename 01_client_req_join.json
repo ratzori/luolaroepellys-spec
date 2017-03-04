@@ -1,9 +1,8 @@
 {
   "type": "request",
   "request": {
-    "type": "quit",
+    "type": "join",
     "nick": "string",
-    "password": "string",
-    "id": 123456789
+    "password": "string"
   }
 }
