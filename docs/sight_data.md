@@ -1,7 +1,7 @@
 #Sight data
 
 ##Full sight data
-Full data is used only once in the initialization to inform full possible field of view. In full pattern @ is in the center of the pattern and width and height are odd numbers. Full pattern contains only symbols S, X and one @.
+Full data is used only once in the initialization to inform full possible field of view. In full pattern @ is in the center of the pattern and width and height are odd numbers. Full pattern contains only symbols S, X and one @. Orientation is the initial orientation of the bot.
 ```
 X  Area than can be seen
 S  Shadow ( area that is out of the sight )
