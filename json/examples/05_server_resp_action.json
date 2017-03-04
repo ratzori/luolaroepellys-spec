@@ -16,7 +16,8 @@
       "pattern": "string"
     },
     "character": {
-      "status": "string"
+      "status": "string",
+      "health": 123456789
     }
   }
 }
