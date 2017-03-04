@@ -15,18 +15,18 @@ height:       9
 width:        9
 pattern:      SSSXXXSSSSSXXXXXSSSXXXXXXXSXXXXXXXXXXXXX@XXXXXXXXXXXXXSXXXXXXXSSSXXXXXSSSSSXXXSSS
 ```
-###Full pattern is decoded by splitting with width and height
+###Full pattern is decoded to table by splitting with width and height
 ```
   012345678
-1 SSSXXXSSS
-2 SSXXXXXSS
-3 SXXXXXXXS
-4 XXXXXXXXX
-5 XXXX@XXXX
-6 XXXXXXXXX
-7 SXXXXXXXS
-8 SSXXXXXSS
-9 SSSXXXSSS
+0 SSSXXXSSS
+1 SSXXXXXSS
+2 SXXXXXXXS
+3 XXXXXXXXX
+4 XXXX@XXXX
+5 XXXXXXXXX
+6 SXXXXXXXS
+7 SSXXXXXSS
+8 SSSXXXSSS
 ```
 
 ##Partial sight data
