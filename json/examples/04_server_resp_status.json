@@ -15,24 +15,23 @@
     "character": {
       "status": "string",
       "health": 123456789,
-      "inventory": {
-        "item": [
-          {
+      "inventory": [
+        {
             "type": "weapon",
             "id": 123456789,
             "damage": 123456789,
             "weapon": {
               "type": "melee"
             }
-          },
-          {
+        },
+        {
             "type": "key",
             "id": 123456789,
             "key": {
               "type": "string"
             }
-          },
-          {
+        },
+        {
             "type": "weapon",
             "id": 123456789,
             "damage": 123456789,
@@ -40,9 +39,8 @@
               "type": "gun",
               "ammo": 123456789
             }
-          }
+        }
         ]
-      }
     }
   }
 }
