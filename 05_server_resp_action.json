@@ -5,10 +5,16 @@
   },
   "response": {
     "type": "action",
+    "action_type": "string",
     "status": "string",
     "error": "string",
-    "orientation": "string",
-    "sight_data": "string",
+    "sight_data": {
+      "type": "partial",
+      "orientation": "string",
+      "width": 123456789,
+      "height": 123456789,
+      "pattern": "string"
+    },
     "character": {
       "status": "string"
     }
