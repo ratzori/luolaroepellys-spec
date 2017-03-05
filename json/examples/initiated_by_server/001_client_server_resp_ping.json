@@ -1,0 +1,10 @@
+{
+  "type": "resp_ping",
+  "resp_ping": {
+    "from": {
+      "id": 123456789,
+      "nick": "string",
+      "password": "string"
+    }
+  }
+}
