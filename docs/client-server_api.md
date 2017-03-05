@@ -6,23 +6,23 @@
 
 ```javascript
 {
-  "type": "request",
-  "request": {
-    "type": "join",
-    "nick": "bot1234",      // Nick to use requested by bot
-    "password": "p4ssw0rd"  // Password to use requested by bot
+  "type": "req_join",
+  "req_join": {
+    "from": {
+      "nick": "bot1234",     // Nick to use requested by bot
+      "password": "p4ssw0rd" // Password to use requested by bot
+    }
   }
 }
 ```
 ### Server->client response
 ```javascript
 {
-  "type": "response",
-  "response": {
-    "type": "join",
+  "type": "resp_join",
+  "resp_join": {
+    "id": 12345678,      // Unique ID assigned for the bot given by server ( uint64 )
     "status": "string",  // ok, forbidden, bad request ...
-    "error": "string",   // Filled when status != OK
-    "id": 123456789      // Unique ID assigend for the bot given by server ( uint64 )
+    "error": "string"    // Filled when status != OK
   }
 }
 ```
@@ -32,26 +32,22 @@
 
 ```javascript
 {
-  "type": "request",
-  "from": {
-    "nick": "string",
-    "password": "string",
-    "id": 123456789
-  },
-  "request": {
-    "type": "quit",
+  "type": "req_quit",
+  "req_quit": {
+    "from": {
+      "id": 123456789,     // Bot ID
+      "nick": "string",
+      "password": "string"
+    }
   }
 }
 ```
 ### Server->client response
 ```javascript
 {
-  "type": "response",
-  "to": {
+  "type": "resp_quit",
+  "resp_quit": {
     "id": 123456789
-  },
-  "response": {
-    "type": "quit",
     "status": "string",
     "error": "string"
   }
@@ -61,14 +57,13 @@
 ### Client->server request
 ```javascript
 {
-  "type": "request",
-  "from": {
-    "nick": "string",
-    "password": "string",
-    "id": 123456789        // Bot ID
-  },
-  "request": {
-    "type": "fow"
+  "type": "req_fow",
+  "req_fow": {
+    "from": {
+      "id": 123456789,
+      "nick": "string",
+      "password": "string"
+    }
   }
 }
 ```
@@ -78,15 +73,12 @@ Fow data contains the full view around the bot
 
 ```javascript
 {
-  "type": "response",
-  "to": {
-    "id": 123456789
-  },
-  "response": {
-    "type": "fow",
+  "type": "resp_fow",
+  "resp_fow": {
+    "id": 123456789,
     "sight_data": {
-      "type": "full",  // Bot in the middle, width and height odd
-      "orientation": "string", // Bot orientation: north, east, south, west, north-east ...
+      "type": "full",          // Bot in the middle, width and height odd
+      "orientation": "north",  // Bot initial orientation: north, east, south, west, north-east ...
       "width": 9,
       "height": 9,
       "pattern": "SSSXXXSSSSSXXXXXSSSXXXXXXXSXXXXXXXXXXXXX@XXXXXXXXXXXXXSXXXXXXXSSSXXXXXSSSSSXXXSSS"
@@ -119,14 +111,13 @@ S = shadow, X = seen area, @ = bot position
 ### Client->server request
 ```javascript
 {
-  "type": "request",
-  "from": {
-    "nick": "string",
-    "password": "string",
-    "id": 123456789
-  },
-  "request": {
-    "type": "status"
+  "type": "req_status",
+  "req_status": {
+    "from": {
+      "id": 123456789,
+      "nick": "string",
+      "password": "string"
+    }
   }
 }
 ```
@@ -164,6 +155,50 @@ S = shadow, X = seen area, @ = bot position
           "id": 123456789
         }
       }
+    }
+  }
+}
+
+{
+  "type": "resp_status",
+  "resp_status": {
+    "id": 123456789,
+    "sight_data": {
+      "type": "partial",        // Partial pattern
+      "orientation": "string",
+      "width": 123456789,
+      "height": 123456789,
+      "pattern": "string"
+    },
+    "character": {
+      "status": "string",       // alive, unconscious, dead
+      "health": 123456789,      // 0 - 100, 0 = dead ( uint8 )
+      "inventory": [
+        {
+          "type": "weapon",
+          "id": 123456789,      // Item ID
+          "damage": 123456789,
+          "weapon": {
+            "type": "melee"
+          }
+        },
+        {
+          "type": "key",
+          "id": 123456789,
+          "key": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "weapon",
+          "id": 123456789,
+          "damage": 123456789,
+          "weapon": {
+            "type": "gun",
+            "ammo": 123456789
+          }
+        }
+      ]
     }
   }
 }
@@ -229,16 +264,43 @@ pattern: SSSSSS.##SS..#SS...S@SSSS
     }
   }
 }
+
+{
+  "type": "req_action",
+  "req_action": {
+    "from": {
+      "id": 123456789,
+      "nick": "string",
+      "password": "string"
+    },
+    "action_type": "string",    // rotate, interact, pick...
+    "move": {
+      "direction": "string"
+    },
+    "rotate": {                 //  available when action_type == rotate
+      "orientation": "string"
+    },
+    "interact": {               //  available when action_type == interact
+      "target_type": "string",  // weapon, key ...
+      "target_id": 123456789    // ID of the target to be interact with
+    },
+    "pick": {                   //  ...
+      "target_type": "string",
+      "target_id": 123456789
+    },
+    "drop": {
+      "target_type": "string",
+      "target_id": 123456789
+    }
+  }
+}
 ```
 ### Server->client response
 ```javascript
 {
-  "type": "response",
-  "to": {
-    "id": 123456789
-  },
-  "response": {
-    "type": "action",
+  "type": "resp_action",
+  "resp_action": {
+    "id": 123456789,
     "action_type": "string",
     "status": "string",
     "error": "string",
@@ -250,7 +312,8 @@ pattern: SSSSSS.##SS..#SS...S@SSSS
       "pattern": "string"
     },
     "character": {
-      "status": "string"
+      "status": "string",
+      "health": 123456789
     }
   }
 }
