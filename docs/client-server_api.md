@@ -125,41 +125,6 @@ S = shadow, X = seen area, @ = bot position
 #### Server indicates the current status of bot
 ```javascript
 {
-  "type": "response",
-  "to": {
-    "id": 123456789
-  },
-  "response": {
-    "type": "status",
-    "sight_data": {
-      "orientation": "string",
-      "type": "partial"         // Partial pattern
-      "width": 123456789,
-      "height": 123456789,
-      "pattern": "string"
-    }
-    "character": {
-      "status": "string",   // alive, unconscious, dead
-      "health": 69,         // 0 - 100, 0 = dead ( uint8 )
-      "inventory": {
-        "item": {
-          "type": "string", // weapon, key ...
-          "id": 123456789   // Item ID
-        },
-        "item": {
-          "type": "string",
-          "id": 123456789
-        },
-        "item": {
-          "type": "string",
-          "id": 123456789
-        }
-      }
-    }
-  }
-}
-
-{
   "type": "resp_status",
   "resp_status": {
     "id": 123456789,
@@ -234,37 +199,6 @@ pattern: SSSSSS.##SS..#SS...S@SSSS
 ### Client->server request
 
 ```javascript
-{
-  "type": "request",
-  "from": {
-    "nick": "string",
-    "password": "string",
-    "id": 123456789
-  },
-  "request": {
-    "type": "action",
-    "action_type": "string",  // rotate, interact, pick...
-    "move": {
-      "direction": "string"
-    },
-    "rotate": {               //  available when action_type == rotate
-      "orientation": "string"
-    },
-    "interact": {             //  available when action_type == interact ...
-      "target_type": "string",  // weapon, key ...
-      "target_id": 123456789    // ID of the target to be interact with
-    },
-    "pick": {
-      "target_type": "string", // to be specified ...
-      "target_id": 123456789   // to be specified ...
-    },
-    "drop": {
-      "target_type": "string",
-      "target_id": 123456789
-    }
-  }
-}
-
 {
   "type": "req_action",
   "req_action": {
