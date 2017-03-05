@@ -1,8 +1,9 @@
 {
-  "type": "request",
-  "request": {
-    "type": "join",
-    "nick": "string",
-    "password": "string"
+  "type": "req_join",
+  "req_join": {
+    "from": {
+      "nick": "string",
+      "password": "string"
+    }
   }
 }

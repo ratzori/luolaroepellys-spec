@@ -1,10 +1,7 @@
 {
-  "type": "response",
-  "to": {
+  "type": "resp_quit",
+  "resp_quit": {
     "id": 123456789
-  },
-  "response": {
-    "type": "quit",
     "status": "string",
     "error": "string"
   }
