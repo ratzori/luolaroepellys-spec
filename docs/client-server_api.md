@@ -108,6 +108,7 @@ S = shadow, X = seen area, @ = bot position
 7 SSXXXXXSS
 8 SSSXXXSSS
 ```
+- More info about sight_data in [sight_data.md](sight_data.md)
 
 ## Bot status request
 ### Client->server request
@@ -251,3 +252,6 @@ pattern: SSSSSS.##SS..#SS...S@SSSS
   }
 }
 ```
+- More info about sight_data in [sight_data.md](sight_data.md)
+- Move and rotate rules are explained in [movement.md](movement.md)
+- Pick and drop rules are explained in [items.md](items.md)
