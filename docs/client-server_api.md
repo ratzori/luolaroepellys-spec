@@ -26,6 +26,8 @@
   }
 }
 ```
+ID-number space is shared with other map elements such as item and doors.
+
 ## Quit game ##
 
 ### Client->server request
@@ -211,20 +213,17 @@ pattern: SSSSSS.##SS..#SS...S@SSSS
     "move": {
       "direction": "string"
     },
-    "rotate": {                 //  available when action_type == rotate
+    "rotate": {                 // Available when action_type == rotate
       "orientation": "string"
     },
-    "interact": {               //  available when action_type == interact
-      "target_type": "string",  // weapon, key ...
-      "target_id": 123456789    // ID of the target to be interact with
+    "interact": {               // Available when action_type == interact
+      "id": 123456789           // Item ID, door ID
     },
     "pick": {                   //  ...
-      "target_type": "string",
-      "target_id": 123456789
+      "id": 123456789           // Item ID
     },
     "drop": {
-      "target_type": "string",
-      "target_id": 123456789
+      "id": 123456789           // Item ID
     }
   }
 }
