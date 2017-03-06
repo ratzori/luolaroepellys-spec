@@ -17,5 +17,5 @@ Example of request handling if tick rate is 20ms:
 
            0     20     40     60     80    100    120    140    160    180    200
 Server     |      |      |      |      |      |      |      |      |      |      |
-                         T  1             2   3             5
+                         T  1             2   3             4
 Client                   |  |_______40____|   |_______40____|
