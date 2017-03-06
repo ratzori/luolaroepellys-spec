@@ -7,4 +7,3 @@
 
 ## API reference
 - [Client-server API](docs/client-server_api.md)
-- [Server-client API](docs/server-client_api.md)
