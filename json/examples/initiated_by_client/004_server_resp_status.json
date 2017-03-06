@@ -22,7 +22,7 @@
           "type": "human",
           "human": {
             "id": 123456789,
-            "nick": "string",
+            "name": "string",
             "status": "string"
           }
         }
