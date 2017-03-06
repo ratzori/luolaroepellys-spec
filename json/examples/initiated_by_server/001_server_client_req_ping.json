@@ -1,6 +1,0 @@
-{
-  "type": "req_ping",
-  "req_ping": {
-    "id": 123456789
-  }
-}
