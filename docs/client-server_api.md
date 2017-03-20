@@ -108,6 +108,7 @@ S = shadow, X = seen area, @ = bot position
 7 SSXXXXXSS
 8 SSSXXXSSS
 ```
+- More info about sight_data in [sight_data.md](sight_data.md)
 
 ## Bot status request
 ### Client->server request
@@ -235,8 +236,8 @@ pattern: SSSSSS.##SS..#SS...S@SSSS
   "resp_action": {
     "id": 123456789,
     "action_type": "string",
-    "status": "string",
-    "error": "string",
+    "status": "string",   // ok when request was successful, i.e. didn't try to walk inside wall etc..
+    "error": "string",    // filled when status != ok
     "sight_data": {
       "type": "partial",
       "orientation": "string",
@@ -245,9 +246,12 @@ pattern: SSSSSS.##SS..#SS...S@SSSS
       "pattern": "string"
     },
     "character": {
-      "status": "string",
+      "status": "string",  // alive, dead, unconscious...
       "health": 123456789
     }
   }
 }
 ```
+- More info about sight_data in [sight_data.md](sight_data.md)
+- Move and rotate rules are explained in [movement.md](movement.md)
+- Pick and drop rules are explained in [items.md](items.md)
