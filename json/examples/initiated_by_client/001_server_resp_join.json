@@ -2,7 +2,6 @@
   "type": "resp_join",
   "resp_join": {
     "id": 12345678,
-    "status": "string",
     "error": "string"
   }
 }

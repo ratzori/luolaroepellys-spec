@@ -22,6 +22,7 @@
           "type": "human",
           "human": {
             "id": 123456789,
+            "orientation": "string",
             "name": "string",
             "status": "string"
           }
@@ -35,24 +36,24 @@
         {
           "type": "weapon",
           "id": 123456789,
-          "damage": 123456789,
           "weapon": {
-            "type": "melee"
+            "type": "melee",
+            "damage": 123456789
           }
         },
         {
           "type": "key",
-          "id": 123456789,
           "key": {
+            "id": 123456789,
             "type": "string"
           }
         },
         {
           "type": "weapon",
-          "id": 123456789,
-          "damage": 123456789,
           "weapon": {
+            "id": 123456789,
             "type": "gun",
+            "damage": 123456789,
             "ammo": 123456789
           }
         }
